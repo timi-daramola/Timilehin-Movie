@@ -3223,11 +3223,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DELL\\Pictures\\Timilehin Movie\\MvcMovie\\MvcMovie.csproj",
+      "projectUniqueName": "C:\\Users\\DELL\\Pictures\\Timilehin Movie\\movie\\MvcMovie.csproj",
       "projectName": "MvcMovie",
-      "projectPath": "C:\\Users\\DELL\\Pictures\\Timilehin Movie\\MvcMovie\\MvcMovie.csproj",
+      "projectPath": "C:\\Users\\DELL\\Pictures\\Timilehin Movie\\movie\\MvcMovie.csproj",
       "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DELL\\Pictures\\Timilehin Movie\\MvcMovie\\obj\\",
+      "outputPath": "C:\\Users\\DELL\\Pictures\\Timilehin Movie\\movie\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config"
