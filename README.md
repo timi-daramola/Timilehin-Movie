@@ -1,4 +1,4 @@
-# MvcMovie
+# Timilehin Movie
 
 [![.NET](https://img.shields.io/badge/.NET-8.0-blue)](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)  
 [![Build](https://img.shields.io/github/actions/workflow/status/<your-username>/MvcMovie/dotnet.yml?branch=main)](https://github.com/<your-username>/MvcMovie/actions)  
