@@ -24,7 +24,7 @@ MvcMovie is a simple **ASP.NET Core MVC web application** that allows users to p
 - Visual Studio Code (or any C# compatible IDE)  
 - SQLite (file-based, no separate installation required)  
 
----
+--- 
 
 ## Project Structure
 
