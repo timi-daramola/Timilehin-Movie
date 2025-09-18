@@ -15,13 +15,17 @@ namespace MvcMovie.Controllers
         }
 
         // GET: Movies
-        public async Task<IActionResult> Index(string searchString)
+        public async Task<IActionResult> Index(int? year)
         {
-            ViewData["CurrentFilter"] = searchString;
-            var movies = from m in _context.Movie select m;
+            ViewData["CurrentYear"] = year;
 
-            if (!string.IsNullOrEmpty(searchString))
-                movies = movies.Where(s => s.Title!.Contains(searchString));
+            var movies = from m in _context.Movie
+                         select m;
+
+            if (year.HasValue)
+            {
+                movies = movies.Where(m => m.ReleaseDate.Year == year.Value);
+            }
 
             return View(await movies.ToListAsync());
         }

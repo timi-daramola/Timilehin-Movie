@@ -4,29 +4,38 @@
     ViewData["Title"] = "Movies";
 }
 
-<h2>Movies</h2>
+<h1>Movies</h1>
 
 <p>
     <a asp-action="Create" class="btn btn-primary">Create New</a>
 </p>
 
-<!-- Search form -->
-<form asp-action="Index" method="get">
-    <p>
-        Search by title: 
-        <input type="text" name="searchString" value="@ViewData["CurrentFilter"]" class="form-control" style="width: 300px; display: inline-block;" />
-        <input type="submit" value="Search" class="btn btn-secondary" />
-    </p>
+<form asp-action="Index" method="get" class="mb-3">
+    <div class="input-group" style="max-width: 200px;">
+        <input type="number" name="year" value="@ViewData["CurrentYear"]" class="form-control" placeholder="Filter by year" />
+        <button type="submit" class="btn btn-secondary">Filter</button>
+        <a asp-action="Index" class="btn btn-light">Reset</a>
+    </div>
 </form>
 
 <table class="table table-striped">
     <thead>
         <tr>
-            <th>Title</th>
-            <th>Release Date</th>
-            <th>Genre</th>
-            <th>Price</th>
-            <th>Rating</th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().ReleaseDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Genre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Rating)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -34,13 +43,13 @@
 @foreach (var item in Model) {
         <tr>
             <td>@item.Title</td>
-            <td>@item.ReleaseDate.ToShortDateString()</td>
+            <td>@item.ReleaseDate.ToString("yyyy-MM-dd")</td>
             <td>@item.Genre</td>
-            <td>@item.Price</td>
+            <td>@item.Price.ToString("C")</td>
             <td>@item.Rating</td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-primary">Edit</a>
-                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-info">Details</a>
+                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-info">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Delete</a>
             </td>
         </tr>
